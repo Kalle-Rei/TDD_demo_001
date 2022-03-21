@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
+    @Test
+    public final void when1OrMoreNumbersAreGreaterThan1000IsUsedThenItIsNotIncludedInSum(){
+        Assert.assertEquals(3+1000+6, Calculator.add("3,1000,1001,6,1234"));
+    }
+
     @Test(expected = RuntimeException.class)
     public final void whenNegativeNumberIsUsedThenRuntimeExceptionIsThrown(){
         Calculator.add("3,-6,15,18,46,33");
