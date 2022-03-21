@@ -6,6 +6,11 @@ import org.junit.Test;
 public class CalculatorTest {
 
     @Test
+    public final void whenDelimitersOfAnyLengthAreUsedThenTheyAreTreatedTheSameAsDelimitersOfAnyOtherLength(){
+        Assert.assertEquals(3+6+15, Calculator.add("//[—]\n3—6—15")); //Will not work because regex expressions are like magic
+    }
+
+    @Test
     public final void when1OrMoreNumbersAreGreaterThan1000IsUsedThenItIsNotIncludedInSum(){
         Assert.assertEquals(3+1000+6, Calculator.add("3,1000,1001,6,1234"));
     }
