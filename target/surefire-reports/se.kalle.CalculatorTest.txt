@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: se.kalle.CalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in se.kalle.CalculatorTest
+initializationError(se.kalle.CalculatorTest)  Time elapsed: 0.002 s  <<< ERROR!
+org.junit.runners.model.InvalidTestClassError: 
+Invalid test class 'se.kalle.CalculatorTest':
+  1. Method when2NumbersAreUsedThenNoExceptionIsThrown() should be public
+  2. Method whenNonNumberIsUsedThenExceptionIsThrown() should be public
+  3. Method whenMoreThan2NumbersAreUsedThenExceptionIsThrown() should be public
+
