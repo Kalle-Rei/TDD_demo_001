@@ -26,7 +26,9 @@ public class Calculator {
                 if (numberInt < 0){
                     negativeNumbers.add(numberInt);
                 }
-                returnValue += numberInt;
+                else if (numberInt <= 1000){
+                    returnValue += numberInt;
+                }
             }
         }
         if (negativeNumbers.size() > 0){
