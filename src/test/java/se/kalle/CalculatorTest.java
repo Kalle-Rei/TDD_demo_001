@@ -11,6 +11,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers(){
+        Assert.assertEquals(3+6+15, Calculator.add("//;n3;6;15"));
+    }
+
+    @Test
     public final void whenAnyNumberOfNumbersIsUsedThenReturnValuesIsTheirSums(){
         Assert.assertEquals(3+6+15+18+46+33, Calculator.add("3,6,15,18,46,33"));
     }
