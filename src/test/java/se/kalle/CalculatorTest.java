@@ -22,4 +22,12 @@ public class CalculatorTest {
     public final void whenEmptyStringIsUsedThenReturnValueIs0(){
         Assert.assertEquals(0, Calculator.add(""));
     }
+    @Test
+    public final void when1NumberIsUsedThenReturnValueIsThatSameNumber(){
+        Assert.assertEquals(3, Calculator.add("3"));
+    }
+    @Test
+    public final void when2NumbersAreUsedThenReturnValueIsTheirSum(){
+        Assert.assertEquals(3+6, Calculator.add("3,6"));
+    }
 }
