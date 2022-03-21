@@ -18,4 +18,8 @@ public class CalculatorTest {
     public final void whenNonNumberIsUsedThenExceptionIsThrown(){
         Calculator.add("1,X");
     }
+    @Test
+    public final void whenEmptyStringIsUsedThenReturnValueIs0(){
+        Assert.assertEquals(0, Calculator.add(""));
+    }
 }

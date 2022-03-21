@@ -2,15 +2,18 @@ package se.kalle;
 
 public class Calculator {
 
-    public static final void add(final String numbers){
+    public static final int add(final String numbers){
         String[] numbersArray = numbers.split(",");
         if (numbersArray.length > 2){
             throw new RuntimeException("Up to 2 numbers separated by comma (,) are allowed");
         }
         else{
             for (String number : numbersArray){
-                Integer.parseInt(number); // if it is not a number parseInt will throw an exception
+                if (!number.isEmpty()){
+                    Integer.parseInt(number); // if it is not a number parseInt will throw an exception
+                }
             }
         }
+        return 0;
     }
 }
